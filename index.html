@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BetterBacks</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="icon" href="./assets/betterbacks_favicon.png" type="image/png">
+    <link rel="stylesheet" href='./assets/index.css' />
+</head>
+<body>
+    <nav>
+        <a target='_blank' href='https://github.com/ferrousdesigner/betterbacks'><i class="fab fa-github"></i></a>
+        <a href='#started'>Get Started</i></a>
+        <a target='_blank' href='https://www.npmjs.com/package/betterbacks'><i class="fab fa-npm"></i></a>
+    </nav>
+    <div class='padding'>
+        <div class="showcase-3d">
+            <div>
+                <div class='demo-one'></div>
+                <div class='demo-two'></div>
+                <div class='demo-three'></div>
+            </div>
+            <div></div>
+        </div>
+        <div class="main-heading">
+            <h1 class="colored-text">BetterBacks</h1>
+        </div>
+        <div class="sshow-after">
+            <div class='desc'>
+                <p>A small Javascript tool to create random fascinating animated backgrounds.</p>
+            </div>
+            <div class="container">
+                <div class="usage" id='started'>
+                    <h2 class="colored-text">Get Started</h2>
+                    <br>
+                    <h3>Install via NPM</h3>
+                    <div class="code">
+                        npm i -S betterbacks
+                    </div>
+                    <br>
+                    <br>
+                    <h3>Include via CDN</h3>
+                    <div class="code">
+                        https://cdn.jsdelivr.net/npm/betterbacks@0.0.0-beta.1/dist/betterbacks.js
+                    </div>
+                    <br>
+                    <br>
+                    <h3>Include via CDN(Minified)</h3>
+                    <div class="code">
+                        https://cdn.jsdelivr.net/npm/betterbacks@0.0.0-beta.1/dist/betterbacks.min.js
+                    </div>
+                </div>
+                <div class="usage">
+                    <h2 class="colored-text">Usage</h2>
+                    <br>
+                    <div class="comment"><ul>
+                        <h4>Betterback function takes three arguments.</h4>
+                        <li>The first argument is your selector of the element, <br>can be a class, id or nested selector like '.example > div'.</li>
+                        <li>The second argument is settings, a Javascript object which is used to customize the background. See the below for properties.</li>
+                        <li>The properties of the settings object are:<br>{
+                            <br>
+                            <span class='highlight'>animate:</span> A boolean property which enables the animation of the background. <br >Values: <span class='highlight'>true / false</span><br><span class='default-values'>Default: false</span>
+                            <br><br>
+                            <span class='highlight'>type:</span>
+                            A string property which can be used to change the shapes of the background element. <br > Values: <span class='highlight'>'circles' / 'squares' / 'squircles'</span> <br><span class='default-values'>Default: 'circles'</span>
+                            <br><br>
+                            <span class='highlight'>density:</span>
+                            A string property which can be used to control the number of background elements rendered. Also, the size of the background elements are inversely proportional to density.<br> Values: <span class='highlight'>'low' / 'med' / 'high'</span><br>
+                            <span class='default-values'>Default: 'med'</span>
+                            <br><br>
+                            <span class='highlight'>themeColor:</span>
+                            A string property which is the theme color of the background. <br>Value: <span class='highlight'>Can be any hex string like: ' #ff6060'</span> <br><span class='default-values'>Default: '#729bff'</span>
+                            <br><br>
+                            <span class='highlight'>dark:</span>
+                            A boolean property which can be used to change enable dark background elements on a lighter background in contrast to light elements on a dark background which is default. <br>Values: <span class='highlight'>true / false</span> <br><span class='default-values'>Default: false</span>
+                            <br>}
+                        </li>
+                    </div> 
+                    <div class="code">
+                        <span class='highlight'>// Import the library
+                        </span><br><br>
+                        import BetterBacks from 'betterbacks';
+                        <br>
+                        let settings = {<br>
+                            animate: true,<br>
+                            type: 'squircles',<br>
+                            density: 'low',<br>
+                            themeColor: '#32ffaa',<br>
+                            dark: true<br>
+                        };
+                        <br>
+                        BetterBacks('.target-class', settings); 
+                        <br>  <br>
+                        <span class='highlight'> // Note: Make sure you are calling the function after the DOM has been rendered</span>
+                    </div>
+                </div>
+                <div class="usage">
+                    <h2 class="colored-text">Result</h2>
+                    <div class="demos target-class">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='footer'>
+        <div><a href='http://thefarazkhan.in'><i class="fas fa-pen-alt"></i></a></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/betterbacks@0.0.0-beta.1/dist/betterbacks.min.js">
+    </script>
+    <script> 
+        var settings = {
+                animate: true,
+                type: 'squircles',
+                density: 'high',
+                themeColor: '#32ffaa',
+                dark: true
+                };
+        BetterBacks('.target-class', settings)   
+        BetterBacks('.demo-one', {animate: true, themeColor: '#ff5050', dark: true})   
+        BetterBacks('.demo-two', {animate: true, themeColor: '#1e85e8', density: 'low'})   
+        BetterBacks('.demo-three', {animate: true, themeColor: '#008866'})    
+        
+    </script>
+</body>
+</html>
