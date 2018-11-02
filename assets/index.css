@@ -157,10 +157,11 @@ body *{
         transform: scale(1);
     }
 }
+
 .colored-text{
     -webkit-text-fill-color: transparent;
     background: -webkit-linear-gradient(transparent, transparent),
-                url(https://cdn.pixabay.com/photo/2016/01/04/17/04/pink-1121216_960_720.jpg) repeat;
+                url('./betterback_back.jpg') repeat;
     background: -o-linear-gradient(transparent, transparent);
     -webkit-background-clip: text;
     background-size: cover;
@@ -464,5 +465,8 @@ h3{
     body nav a:hover:before{
         transform: scale(0) translate(0);
         opacity: 0;
+    }
+    .mobile-wrapper{
+        transform: scale(0.5) translateX(20%);
     }
 }
